@@ -1,0 +1,17 @@
+Here's a detailed description of the 'lunar-date-calculator' integration and its accuracy:
+
+1.  **Library Used:** `lunar-date-calculator` (npm package).
+2.  **Integration Point:** `daily-book/client/src/pages/HomePage.js`.
+3.  **Core Logic:**
+    *   I imported the `lunarDateFromSolarDate` function from the library.
+    *   The existing `getLunarDate` helper function (formerly `getLunarDatePlaceholder`) now uses this imported function.
+    *   It takes a standard JavaScript `Date` object (Gregorian date) as input.
+    *   Inside `getLunarDate`, `lunarDateFromSolarDate(gregorianDate.getFullYear(), gregorianDate.getMonth() + 1, gregorianDate.getDate())` is called. The `+ 1` is crucial because `getMonth()` returns a 0-indexed month.
+    *   This function returns an object containing the calculated Chinese Lunar date (e.g., `{ year: 2025, month: 11, day: 2, isLeapMonth: false }`).
+    *   The `getLunarDate` function then formats this object into a user-friendly string like 'Lunar: 11/2/2025'.
+4.  **Accuracy:** This library performs the actual calculations for the Chinese Lunar calendar, making the displayed lunar dates accurate according to that system, unlike the previous simple placeholder.
+5.  **Lunisolar Display:** For the 'Lunisolar' view, the application now correctly displays the Gregorian date alongside this accurately calculated Chinese Lunar date. The disclaimer for 'Lunisolar' has been updated to reflect that it now displays both.
+
+This means that when you select a Gregorian date, the application actively calculates and shows its corresponding Chinese Lunar date based on recognized algorithms, providing a much higher level of accuracy than before.
+
+This completes the task of improving the Lunar/Lunisolar calendar accuracy and adding tagging for diary entries. Please let me know if you have any further requests!

@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f6f8; /* Default light mode background */
+  color: #333; /* Default light mode text */
+}
+
+/* Dark mode overrides for react-calendar */
+.dark-mode .react-calendar {
+  background-color: #1e1e1e; /* Darker background for calendar in dark mode */
+  color: #ffffff; /* Light text for calendar in dark mode */
+  border-color: #424242; /* Adjust border color for dark mode */
+}
+
+.dark-mode .react-calendar__navigation button {
+  color: #ffffff; /* Navigation buttons text */
+}
+
+.dark-mode .react-calendar__month-view__weekdays abbr {
+  color: rgba(255, 255, 255, 0.7); /* Weekday abbreviations */
+}
+
+.dark-mode .react-calendar__tile {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .react-calendar__tile:enabled:hover,
+.dark-mode .react-calendar__tile:enabled:focus {
+  background-color: #333; /* Hover/focus background */
+}
+
+.dark-mode .react-calendar__tile--now {
+  background: #424242; /* Today's tile background */
+}
+
+.dark-mode .react-calendar__tile--active {
+  background: #90caf9; /* Selected tile background */
+  color: #000000; /* Selected tile text */
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+}
